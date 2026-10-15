@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>submit</title>
+</head>
+<body>
+
+    <input type="text" placeholder="name"  class="js-input" 
+        onkeydown="if (event.key === 'Enter') buttonFun()">
+        
+    <button onclick="buttonFun();" class="js-button"
+        >Submit</button>
+
+    <p class="js-pass"></p>
+
+
+    <script>
+        function buttonFun() {
+            const Name = document.querySelector('.js-input').value;
+            
+                document.querySelector('.js-pass').innerHTML = `You name is ${Name}`;
+        
+        }
+
+
+    </script>
+</body>
+</html>
